@@ -41,7 +41,7 @@ import com.payu.india.Tasks.BinInfoTask;
 import com.payu.india.Tasks.GetPaymentRelatedDetailsTask;
 import com.payu.india.Tasks.ValueAddedServiceTask;
 import com.payu.paymentparamhelper.PaymentParams;
-import com.payu.paymentparamhelper.PaymentPostParams;
+import com.payu.india.PostParams.PaymentPostParams;
 import com.payu.paymentparamhelper.PostData;
 import com.payu.paymentparamhelper.siparams.SIParams;
 import com.payu.payuui.Adapter.PagerAdapter;
@@ -561,7 +561,7 @@ public class PayUBaseActivity extends FragmentActivity implements PaymentRelated
             if (etMobileNumberZestmoney != null) {
                 mPaymentParams.setPhone(etMobileNumberZestmoney.getText().toString().trim());
                 mPaymentParams.setBankCode(SdkUIConstants.ZESTMON);
-                mPaymentParams.setCardlessEMI(true);
+//                mPaymentParams.setCardlessEMI(true);
                 try {
                     mPostData = new PaymentPostParams(mPaymentParams, PayuConstants.EMI).getPaymentPostParams();
                 } catch (Exception e) {
@@ -646,7 +646,7 @@ public class PayUBaseActivity extends FragmentActivity implements PaymentRelated
 
         spinnerNetbanking = (Spinner) findViewById(R.id.spinner);
         ArrayList<PaymentDetails> netBankingList = null;
-        if(mPayuResponse!=null && (mPaymentParams.getSiParams()==null || mPaymentParams.getSiParams().toString().isEmpty()) )
+        if(mPayuResponse!=null && (mPaymentParams.getSiParams()==null || mPaymentParams.getSiParams().toString().isEmpty()))
         netBankingList = mPayuResponse.getNetBanks();
         else
         netBankingList = mPayuResponse.getSiBankList();

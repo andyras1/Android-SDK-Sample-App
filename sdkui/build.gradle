@@ -1,13 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 2
-        versionName "2.0.1"
+        targetSdkVersion 32
     }
     buildTypes {
         release {
@@ -19,12 +17,12 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api 'in.payu:payu-sdk:5.4.8'
-    implementation 'in.payu:payu-custom-browser:7.10.4'
+    api 'in.payu:payu-sdk:5.4.9'
+    implementation 'in.payu:payu-custom-browser:7.10.5'
     implementation 'com.payu.samsungpay:samsungpay:1.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'in.payu:phonepe-intent:1.6.3'
+//    implementation 'in.payu:phonepe-intent:1.6.3'
     implementation 'in.payu:payu-gpay:1.4.2'
     implementation 'in.payu:upisdk:1.5.4'
 }
