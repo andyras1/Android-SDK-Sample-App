@@ -22,8 +22,8 @@ import com.payu.india.Model.PayuConfig;
 import com.payu.india.Payu.PayuConstants;
 import com.payu.india.Payu.PayuErrors;
 import com.payu.paymentparamhelper.PostData;
-import com.payu.phonepe.PhonePe;
-import com.payu.phonepe.callbacks.PayUPhonePeCallback;
+//import com.payu.phonepe.PhonePe;
+//import com.payu.phonepe.callbacks.PayUPhonePeCallback;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -51,7 +51,7 @@ public class PaymentsActivity extends FragmentActivity {
         if (savedInstanceState == null) { ;
             bundle = getIntent().getExtras();
 
-            PhonePe phonePe = PhonePe.getInstance();
+//            PhonePe phonePe = PhonePe.getInstance();
 
 
           /*  if (bundle != null) {
@@ -96,7 +96,7 @@ public class PaymentsActivity extends FragmentActivity {
                 }
 
 
-                PayUPhonePeCallback payUPhonePeCallback = new PayUPhonePeCallback() {
+              /*  PayUPhonePeCallback payUPhonePeCallback = new PayUPhonePeCallback() {
 
                     // Called when Payment gets Successful
                     @Override
@@ -118,7 +118,7 @@ public class PaymentsActivity extends FragmentActivity {
                         setResult(PayuConstants.PAYU_REQUEST_CODE,intent);
                         finish();
                     }
-                };
+                };*/
 
                 //set callback to track important events
                 PayUCustomBrowserCallback payUCustomBrowserCallback = new PayUCustomBrowserCallback() {
